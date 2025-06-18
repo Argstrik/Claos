@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Calisthenics Ascension</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calisthenics Ascension Protocol</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
 </head>
 <body>
-  <div id="root"></div>
+    <div id="app">
+        <div class="screen" id="login-screen">
+            <div class="terminal">
+                <pre>🔐 [CALISTHENICS ASCENSION PROTOCOL]
+"Only those who dare to move alone will reshape the world."
+
+Type "I'm ready" to sync your essence.</pre>
+                <input type="text" id="prologue-input" placeholder="Type command...">
+            </div>
+        </div>
+        
+        <div class="screen hidden" id="metrics-screen">
+            <!-- Dynamically generated -->
+        </div>
+        
+        <div class="screen hidden" id="status-screen">
+            <!-- Dynamically generated -->
+        </div>
+    </div>
+    
+    <script type="module" src="/src/firebase.js"></script>
+    <script type="module" src="/src/auth.js"></script>
+    <script type="module" src="/src/calculator.js"></script>
+    <script type="module" src="/src/guild.js"></script>
+    <script type="module" src="/src/workout.js"></script>
+    <script type="module" src="/src/ui.js"></script>
 </body>
 </html>
