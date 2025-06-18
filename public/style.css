@@ -1,0 +1,109 @@
+:root {
+    --common: #999999;
+    --rare: #2ECC71;
+    --epic: #3498DB;
+    --legendary: #9B59B6;
+    --mythical: #F1C40F;
+}
+
+body {
+    background-color: #0a0a12;
+    color: #EEEEEE;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.hidden {
+    display: none;
+}
+
+.terminal {
+    background-color: #1E1E1E;
+    border: 2px solid var(--common);
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.3);
+}
+
+.status-window {
+    background-color: #121220;
+    border: 3px solid var(--common);
+    border-radius: 10px;
+    padding: 15px;
+    width: 95%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.constellation-panel {
+    background: rgba(30, 30, 46, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.profile-panel {
+    background: rgba(30, 30, 46, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.stat-badge {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.attribute-bar {
+    margin: 10px 0;
+}
+
+.bar-container {
+    height: 20px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.bar-fill {
+    height: 100%;
+    background: var(--rare);
+    transition: width 0.5s ease-in-out;
+}
+
+.guild-section {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile optimization */
+@media (min-width: 768px) {
+    .status-window {
+        grid-template-columns: 1fr 2fr;
+    }
+}
